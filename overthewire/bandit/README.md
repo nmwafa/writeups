@@ -117,3 +117,62 @@ cat /etc/bandit_pass/bandit14
 ```bash
 echo 'bandit14_password' | nc localhost 30000
 ```
+
+## Level 16
+
+```bash
+openssl s_client -connect localhost:30001
+# Then paste Level 15 password
+```
+
+## Level 17
+
+```bash
+nmap -sV localhost -p31000-32000
+openssl s_client -connect localhost:31790 --quiet
+# Then paste Level 16 password
+ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
+cat /etc/bandit_pass/bandit17
+```
+
+## Level 18
+
+```bash
+grep -wvf passwords.old passwords.new
+```
+
+## Level 19
+
+```bash
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'ls'
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'cat readme'
+```
+
+## Level 20
+
+```bash
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+## Level 21
+
+```bash
+tmux
+on window 0: nc -l -p 9999
+on window 1: ./suconnect 9999 -> then paste level 20 password
+on window 0: paste level 20 password
+```
+
+## Level 22
+
+```bash
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+```
+
+## Level 23
+
+```bash
+
+```
